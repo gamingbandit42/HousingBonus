@@ -224,10 +224,11 @@ namespace GarnersHouses
                         while (i < 20)
                         {
                             Console.WriteLine("lolololololololololololololololololololol");
+                            Console.Beep(600, 256);
+                            Console.Beep(300, 256);
                             Console.WriteLine();
                             i++;
                         }
-                        Console.Beep(600, 1024);
                         Console.WriteLine("You've found the easter egg");
                         Console.WriteLine("Exiting Program");
                         continueProgram = false; // Exit the loop
