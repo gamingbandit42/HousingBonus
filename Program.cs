@@ -115,7 +115,7 @@ namespace GarnersHouses
             employees = employees.OrderByDescending(e => e.PropertiesSold).ToList();
         }
         // Method to calculate bonus for top-selling employee(s)
-        public void CalculateBonus()
+        public void CalculateBonus() // if you touch this, program go kablewey
         {
             if (employees.Count > 0)
             {
