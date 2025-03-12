@@ -218,7 +218,7 @@ namespace GarnersHouses
                         Console.WriteLine("#################################################################################");
                         continueProgram = true; // Continue the loop
                     }
-                    else if (exit == "EASTER")
+                    else if (exit == "EASTER") // funny but exits
                     {
                         int i = 0;
                         while (i < 20)
@@ -228,7 +228,7 @@ namespace GarnersHouses
                             i++;
                         }
                         Console.Beep(900, 2048);
-                        Console.WriteLine("You've found the easter egg");
+                        Console.WriteLine("You've found the easter egg, a beep");
                         Console.WriteLine("Exiting Program");
                         continueProgram = false; // Exit the loop
 
