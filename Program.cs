@@ -11,7 +11,6 @@ namespace GarnersHouses
         public int PropertiesSold { get; set; }
         public decimal Commission { get; set; }
         public decimal Bonus { get; set; }
-
         public Employee(string name, int employeeId, int propertiesSold)
         {
             Name = name;
@@ -21,14 +20,12 @@ namespace GarnersHouses
             Bonus = 0m; // Initially set to 0; we will calculate the bonus later
         }
     }
-
     class PropertyAgency
     {
         private List<Employee> employees = new List<Employee>();
         private decimal totalCommission = 0;
         private decimal totalBonus = 0;
         private int totalPropertiesSold = 0;
-
         // Method to input employee details
         public void InputEmployeeData()
         {
@@ -45,11 +42,9 @@ namespace GarnersHouses
                     Console.WriteLine("Invalid input. Please enter a positive number.");
                 }
             }
-
             for (int i = 0; i < numEmployees; i++)
             {
                 Console.WriteLine($"Enter details for employee {i + 1}:");
-
                 // Validate employee name to ensure it's letters and spaces only
                 string? name;
                 while (true)
@@ -65,7 +60,6 @@ namespace GarnersHouses
                         break;
                     }
                 }
-
                 // Validate employee ID (must be unique and valid)
                 int employeeId;
                 while (true)
@@ -80,7 +74,6 @@ namespace GarnersHouses
                         Console.WriteLine("This ID is already taken or invalid. Please enter a unique valid ID.");
                     }
                 }
-
                 // Validate number of properties sold (must be a non-negative integer)
                 int propertiesSold;
                 while (true)
@@ -95,28 +88,23 @@ namespace GarnersHouses
                         Console.WriteLine("Invalid input. Please enter a non-negative number for properties sold.");
                     }
                 }
-
                 // Create and add the employee to the list
                 Employee employee = new Employee(name, employeeId, propertiesSold);
                 employees.Add(employee);
-
                 totalCommission += employee.Commission;
                 totalPropertiesSold += propertiesSold;
             }
         }
-
         // Method to check if employee ID already exists
         private bool EmployeeIdExists(int employeeId)
         {
             return employees.Any(e => e.EmployeeId == employeeId);
         }
-
         // Method to sort employees by properties sold (highest to lowest)
         public void SortEmployeesByPropertiesSold()
         {
             employees = employees.OrderByDescending(e => e.PropertiesSold).ToList();
         }
-
         // Method to calculate bonus for top-selling employee(s)
         public void CalculateBonus()
         {
@@ -138,7 +126,6 @@ namespace GarnersHouses
                 }
             }
         }
-
         // Method to display results
         public void DisplayResults()
         {
@@ -148,11 +135,9 @@ namespace GarnersHouses
                 // Displaying employee's name, properties sold, commission, and bonus together
                 Console.WriteLine($"{employee.Name} (ID: {employee.EmployeeId}) - Properties Sold: {employee.PropertiesSold} - Commission: £{employee.Commission:F2} - Bonus: £{employee.Bonus:F2}");
             }
-
             Console.WriteLine($"\nTotal Commission Paid: £{totalCommission:F2}");
             Console.WriteLine($"Total Bonus Paid: £{totalBonus:F2}");
             Console.WriteLine($"Total Number of Properties Sold: {totalPropertiesSold}");
-
             // Display the employee(s) who sold the most properties
             var topSellers = employees.Where(e => e.PropertiesSold == employees.Max(emp => emp.PropertiesSold)).ToList();
             Console.WriteLine("\nTop Seller(s):");
@@ -161,7 +146,6 @@ namespace GarnersHouses
                 Console.WriteLine($"{topSeller.Name} - Properties Sold: {topSeller.PropertiesSold}");
             }
         }
-
         // Helper method to validate that the name contains only letters and spaces (no regex)
         private static bool IsValidName(string name)
         {
@@ -170,7 +154,6 @@ namespace GarnersHouses
             {
                 return false;
             }
-
             // Check each character in the name to see if it's a letter or space
             foreach (var character in name)
             {
@@ -179,7 +162,6 @@ namespace GarnersHouses
                     return false;
                 }
             }
-
             return true;
         }
     }
@@ -195,7 +177,6 @@ namespace GarnersHouses
                 try
                 {
                     PropertyAgency agency = new PropertyAgency();
-
                     agency.InputEmployeeData();
                     agency.SortEmployeesByPropertiesSold();
                     agency.CalculateBonus(); // Now calculating bonus before displaying results
@@ -231,7 +212,6 @@ namespace GarnersHouses
                         Console.WriteLine("You've found the easter egg, a beep");
                         Console.WriteLine("Exiting Program");
                         continueProgram = false; // Exit the loop
-
                     }
                     else
                     {
