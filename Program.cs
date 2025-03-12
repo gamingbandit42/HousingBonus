@@ -85,7 +85,7 @@ namespace GarnersHouses
                     }
                     else
                     {
-                        Console.WriteLine("Invalid input. Please enter a non-negative number for properties sold.");
+                        Console.WriteLine("Invalid input. Please enter a non-negative number for properties sold. If you have entered a large number, it may be over the 32 bit signed integer limit");
                     }
                 }
                 // Create and add the employee to the list
