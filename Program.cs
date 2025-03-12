@@ -56,13 +56,13 @@ namespace GarnersHouses
                 {
                     Console.Write("Enter employee name: ");
                     name = Console.ReadLine();
-                    if (IsValidName(name))
+                    if (!IsValidName(name: name))
                     {
-                        break;
+                        Console.WriteLine("Invalid name. Please enter a name that contains only letters and spaces.");
                     }
                     else
                     {
-                        Console.WriteLine("Invalid name. Please enter a name that contains only letters and spaces.");
+                        break;
                     }
                 }
 
