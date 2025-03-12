@@ -156,7 +156,7 @@ namespace GarnersHouses
             }
         }
         // Helper method to validate that the name contains only letters and spaces (no regex)
-        private static bool IsValidName(string name)
+        private bool IsValidName(string name)
         {
             // Check if the name is empty
             if (string.IsNullOrWhiteSpace(name))
