@@ -7,7 +7,7 @@ using System.Linq;
 // please increment the following counter as a warning 
 // to the next guy: 
 //
-int total_hours_wasted_here = 500;
+// int total_hours_wasted_here = 500;
 // 
 
 namespace GarnersHouses
@@ -42,13 +42,14 @@ namespace GarnersHouses
             Console.WriteLine("Enter the number of employees: ");
             while (true)
             {
-                if (int.TryParse(Console.ReadLine(), out numEmployees) && numEmployees > 0)
+                if (int.TryParse(Console.ReadLine(), out numEmployees) && numEmployees > 1 && numEmployees < 6)
                 {
                     break;
                 }
+
                 else
                 {
-                    Console.WriteLine("Invalid input. Please enter a positive number.");
+                    Console.WriteLine("Invalid input. Please enter a positive number between 2 and 5.");
                 }
             }
             for (int i = 0; i < numEmployees; i++)
