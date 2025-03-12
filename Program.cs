@@ -218,7 +218,7 @@ namespace GarnersHouses
                         Console.WriteLine("#################################################################################");
                         continueProgram = true; // Continue the loop
                     }
-                    else if (exit == "EASTER")
+                    else if (exit == "EASTER") // funny but exits
                     {
                         int i = 0;
                         while (i < 20)
