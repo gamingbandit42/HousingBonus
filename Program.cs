@@ -144,13 +144,13 @@ namespace GarnersHouses
                 // Displaying employee's name, properties sold, commission, and bonus together
                 Console.WriteLine($"{employee.Name} (ID: {employee.EmployeeId}) - Properties Sold: {employee.PropertiesSold} - Commission: £{employee.Commission:F2} - Bonus: £{employee.Bonus:F2}");
             }
-            Console.WriteLine($"\nTotal Commission Paid: £{totalCommission:F2}");
-            Console.WriteLine($"Total Bonus Paid: £{totalBonus:F2}");
-            Console.WriteLine($"Total Number of Properties Sold: {totalPropertiesSold}");
+            Console.WriteLine($"\nTotal Commission Paid: £{totalCommission:F2}"); // DO NOT MESS WITH THIS
+            Console.WriteLine($"Total Bonus Paid: £{totalBonus:F2}"); // IF THIS IS MESSED WITH, kys
+            Console.WriteLine($"Total Number of Properties Sold: {totalPropertiesSold}"); // ok seriously, pls do not touch
             // Display the employee(s) who sold the most properties
             var topSellers = employees.Where(e => e.PropertiesSold == employees.Max(emp => emp.PropertiesSold)).ToList();
             Console.WriteLine("\nTop Seller(s):");
-            foreach (var topSeller in topSellers)
+            foreach (var topSeller in topSellers) // what the heck is foreach
             {
                 Console.WriteLine($"{topSeller.Name} - Properties Sold: {topSeller.PropertiesSold}");
             }
@@ -168,10 +168,10 @@ namespace GarnersHouses
             {
                 if (!char.IsLetter(character) && character != ' ')
                 {
-                    return false;
+                    return false; // returns the answer to the question "Do you touch grass?"
                 }
             }
-            return true;
+            return true; // a lie
         }
     }
 
@@ -181,7 +181,7 @@ namespace GarnersHouses
         {
             bool continueProgram = true; // loop
 
-            while (continueProgram)
+            while (continueProgram) // crappy piece of shit
             {
                 try
                 {
@@ -191,14 +191,14 @@ namespace GarnersHouses
                     agency.CalculateBonus(); // Now calculating bonus before displaying results
                     agency.DisplayResults();
                 }
-                catch (Exception)
+                catch (Exception) // rather basic error handling
                 {
                     Console.WriteLine("An error has occurred, Please follow the instructions given to you and try again. If the error still occurs, Please inform the maintainer");
                 }
                 finally
                 {
                     Console.WriteLine("#################################################################################");
-                    Console.WriteLine("Do you wish to continue? Y/N [DEFAULT = N]");
+                    Console.WriteLine("Do you wish to continue? Y/N [DEFAULT = N]"); // Asks user to continue or not?
                     string? exit = Console.ReadLine();
                     exit = exit?.ToUpper();
 
@@ -213,12 +213,12 @@ namespace GarnersHouses
                         int i = 0;
                         while (i < 20)
                         {
-                            Console.WriteLine("lolololololololololololololololololololol");
+                            Console.WriteLine("lolololololololololololololololololololol"); // Seriously?
                             Console.WriteLine();
                             i++;
                         }
-                        Console.Beep(900, 2048);
-                        Console.WriteLine("You've found the easter egg, a beep");
+                        Console.Beep(900, 2048); // annoying as fuck but funny.
+                        Console.WriteLine("You've found the easter egg, a beep"); // well no shit mate
                         Console.WriteLine("Exiting Program");
                         continueProgram = false; // Exit the loop
                     }
