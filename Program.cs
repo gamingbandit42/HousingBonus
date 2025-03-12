@@ -1,11 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+// Dear maintainer: 
+// Once you are done trying to 'optimize' this program,
+// and have realized what a terrible mistake that was, 
+// please increment the following counter as a warning 
+// to the next guy: 
+//
+int total_hours_wasted_here = 500;
+// 
 
 namespace GarnersHouses
 {
     class Employee
     {
+        // creates arrays and shit
         public string Name { get; set; }
         public int EmployeeId { get; set; }
         public int PropertiesSold { get; set; }
@@ -168,9 +177,9 @@ namespace GarnersHouses
 
     class Program
     {
-        public static void Main(string[] args)
+        public static void Main(string[] args) // Main Method // Truly a Poundland Java 
         {
-            bool continueProgram = true;
+            bool continueProgram = true; // loop
 
             while (continueProgram)
             {
@@ -216,7 +225,9 @@ namespace GarnersHouses
                     else
                     {
                         Console.WriteLine("Exiting Program");
-                        continueProgram = false; // Exit the loop
+                        continueProgram = false; // Exit the loop 
+                        // somedev 11/01/2020: Temporary Fix to allow loop exit
+                        // someotherdev 12/03/2025: Temporary my ass
                     }
                 }
             }
