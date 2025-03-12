@@ -230,8 +230,8 @@ namespace GarnersHouses
                         int j = 0;
                         while (j < 20)
                         {
-                            Console.Beep(200, 512);
-                            Console.Beep(600, 512);
+                            Console.Beep(200, 2048);
+                            Console.Beep(600, 2048);
                             j++;
                         }
                         Console.WriteLine("You've found the easter egg");
