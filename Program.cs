@@ -10,7 +10,7 @@ using System.Linq;
 // int total_hours_wasted_here = 500;
 // 
 
-namespace GarnersHouses
+namespace GarnersHousing
 {
     class Employee
     {
@@ -157,7 +157,7 @@ namespace GarnersHouses
             }
         }
         // Helper method to validate that the name contains only letters and spaces (no regex)
-        private bool IsValidName(string? name)
+        private static bool IsValidName(string? name)
         {
             // Check if the name is empty
             if (string.IsNullOrWhiteSpace(name))
@@ -178,7 +178,7 @@ namespace GarnersHouses
 
     class Program
     {
-        public static void Main(string[] args) // Main Method // Truly a Poundland Java 
+        public static void Main() // Main Method // Truly a Poundland Java 
         {
             bool continueProgram = true; // loop
 
