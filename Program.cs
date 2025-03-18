@@ -15,12 +15,12 @@ namespace GarnersHouses
     class Employee
     {
         // creates arrays
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public int EmployeeId { get; set; }
         public int PropertiesSold { get; set; }
         public decimal Commission { get; set; }
         public decimal Bonus { get; set; }
-        public Employee(string name, int employeeId, int propertiesSold)
+        public Employee(string? name, int employeeId, int propertiesSold)
         {
             Name = name;
             EmployeeId = employeeId;
