@@ -14,7 +14,7 @@ namespace GarnersHouses
 {
     class Employee
     {
-        // creates arrays and shit
+        // creates arrays
         public string Name { get; set; }
         public int EmployeeId { get; set; }
         public int PropertiesSold { get; set; }
@@ -145,9 +145,9 @@ namespace GarnersHouses
                 // Displaying employee's name, properties sold, commission, and bonus together
                 Console.WriteLine($"{employee.Name} (ID: {employee.EmployeeId}) - Properties Sold: {employee.PropertiesSold} - Commission: £{employee.Commission:F2} - Bonus: £{employee.Bonus:F2}");
             }
-            Console.WriteLine($"\nTotal Commission Paid: £{totalCommission:F2}"); // DO NOT MESS WITH THIS
-            Console.WriteLine($"Total Bonus Paid: £{totalBonus:F2}"); // IF THIS IS MESSED WITH, kys
-            Console.WriteLine($"Total Number of Properties Sold: {totalPropertiesSold}"); // ok seriously, pls do not touch
+            Console.WriteLine($"\nTotal Commission Paid: £{totalCommission:F2}"); 
+            Console.WriteLine($"Total Bonus Paid: £{totalBonus:F2}"); 
+            Console.WriteLine($"Total Number of Properties Sold: {totalPropertiesSold}"); 
             // Display the employee(s) who sold the most properties
             var topSellers = employees.Where(e => e.PropertiesSold == employees.Max(emp => emp.PropertiesSold)).ToList();
             Console.WriteLine("\nTop Seller(s):");
@@ -157,7 +157,7 @@ namespace GarnersHouses
             }
         }
         // Helper method to validate that the name contains only letters and spaces (no regex)
-        private bool IsValidName(string name)
+        private bool IsValidName(string? name)
         {
             // Check if the name is empty
             if (string.IsNullOrWhiteSpace(name))
@@ -169,10 +169,10 @@ namespace GarnersHouses
             {
                 if (!char.IsLetter(character) && character != ' ')
                 {
-                    return false; // returns the answer to the question "Do you touch grass?"
+                    return false; // returns false
                 }
             }
-            return true; // a lie
+            return true; // returns true
         }
     }
 
@@ -182,7 +182,7 @@ namespace GarnersHouses
         {
             bool continueProgram = true; // loop
 
-            while (continueProgram) // crappy piece of shit
+            while (continueProgram) // While Loop Case
             {
                 try
                 {
@@ -209,26 +209,12 @@ namespace GarnersHouses
                         Console.WriteLine("#################################################################################");
                         continueProgram = true; // Continue the loop
                     }
-                    else if (exit == "EASTER") // funny but exits
-                    {
-                        int i = 0;
-                        while (i < 20)
-                        {
-                            Console.WriteLine("lolololololololololololololololololololol"); // Seriously?
-                            Console.WriteLine();
-                            i++;
-                        }
-                        Console.Beep(900, 2048); // annoying as fuck but funny.
-                        Console.WriteLine("You've found the easter egg, a beep"); // well no shit mate
-                        Console.WriteLine("Exiting Program");
-                        continueProgram = false; // Exit the loop
-                    }
                     else
                     {
                         Console.WriteLine("Exiting Program");
                         continueProgram = false; // Exit the loop 
                         // somedev 11/01/2020: Temporary Fix to allow loop exit
-                        // someotherdev 12/03/2025: Temporary my ass
+                        // someotherdev 12/03/2025: Temporary is a very ironic word there mate
                     }
                 }
             }
