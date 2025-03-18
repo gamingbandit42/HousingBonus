@@ -10,7 +10,7 @@ using System.Linq;
 // int total_hours_wasted_here = 500;
 // 
 
-namespace GarnersHousing
+namespace Housing
 {
     class Employee
     {
